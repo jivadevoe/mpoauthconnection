@@ -9,7 +9,6 @@
 #import "MPOAuthURLResponse.h"
 
 @interface MPOAuthURLResponse ()
-@property (nonatomic, readwrite, retain) NSURLResponse *urlResponse;
 @property (nonatomic, readwrite, retain) NSDictionary *oauthParameters;
 @end
 

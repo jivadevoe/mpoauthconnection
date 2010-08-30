@@ -14,7 +14,7 @@
 	NSDictionary	*_oauthParameters;
 }
 
-@property (nonatomic, readonly, retain) NSURLResponse *urlResponse;
+@property (nonatomic, retain) NSURLResponse *urlResponse;
 @property (nonatomic, readonly, retain) NSDictionary *oauthParameters;
 
 @end
