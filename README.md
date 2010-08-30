@@ -1,3 +1,3 @@
-This is nothing more than a fork of Karl Adam's mpoauthconnection.  I hate svn, so I didn't really want to be checking into google code as I fixed things in here... so I set up this repo for my use and my friend's use.  If you want to use it, fine, but really, Karl deserves the credit, and you should get it from the source in case he chooses to update it.
+This is nothing more than a fork of Karl Adam's mpoauthconnection.  I hate svn, so I didn't really want to be checking into google code as I fixed things in here... so I set up this repo for my use and my friend's use.  If you want to use it, fine, but really, Karl deserves the credit, and you should get it from the original source (him, on google code) not from here.  He does seem to be updating it here and there.
 
-Will I maintain this if he makes big changes? Perhaps not... who knows.
+Will I maintain this if he makes big changes? Perhaps not... who knows.  Will I send him patches from my updates?  Maybe... if they're really worthwhile.
