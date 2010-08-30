@@ -15,6 +15,7 @@
 #import "MPURLRequestParameter.h"
 
 #import "NSURL+MPURLParameterAdditions.h"
+#import "MPDebug.h"
 
 NSString *MPOAuthRequestTokenURLKey					= @"MPOAuthRequestTokenURL";
 NSString *MPOAuthUserAuthorizationURLKey			= @"MPOAuthUserAuthorizationURL";

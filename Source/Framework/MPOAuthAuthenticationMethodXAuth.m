@@ -9,6 +9,7 @@
 #import "MPOAuthAuthenticationMethodXAuth.h"
 #import "MPURLRequestParameter.h"
 #import "MPOAuthAPIRequestLoader.h"
+#import "MPDebug.h"
 
 @interface MPOAuthAPI ()
 @property (nonatomic, readwrite, assign) MPOAuthAuthenticationState authenticationState;

@@ -15,6 +15,7 @@
 #import <libxml/parser.h>
 #import <libxml/xpath.h>
 #import <libxml/xpathInternals.h>
+#import "MPDebug.h"
 
 @interface MPOAuthAPI ()
 @property (nonatomic, readwrite, assign) MPOAuthAuthenticationState authenticationState;
