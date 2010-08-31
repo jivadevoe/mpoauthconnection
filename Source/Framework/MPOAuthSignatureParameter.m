@@ -12,7 +12,7 @@
 #import "NSURL+MPURLParameterAdditions.h"
 
 #import <CommonCrypto/CommonHMAC.h>
-#include "Base64Transcoder.h"
+#import "NSData_Base64.h"
 
 @interface MPOAuthSignatureParameter ()
 - (id)initUsingHMAC_SHA1WithText:(NSString *)inText andSecret:(NSString *)inSecret forRequest:(MPOAuthURLRequest *)inRequest;
@@ -36,15 +36,9 @@
     CCHmacInit(&hmacContext, kCCHmacAlgSHA1, secretData.bytes, secretData.length);
     CCHmacUpdate(&hmacContext, textData.bytes, textData.length);
     CCHmacFinal(&hmacContext, result);
-	
-	//Base64 Encoding
-	char base64Result[32];
-	size_t theResultLength = 32;
-	Base64EncodeData(result, 20, base64Result, &theResultLength);
-	NSData *theData = [NSData dataWithBytes:base64Result length:theResultLength];
-	NSString *base64EncodedResult = [[[NSString alloc] initWithData:theData encoding:NSUTF8StringEncoding] autorelease];
-	
-	return base64EncodedResult;
+
+	NSData *theData = [NSData dataWithBytes:result length:CC_SHA1_DIGEST_LENGTH];
+    return [theData base64Encoding];
 }
 
 - (id)initWithText:(NSString *)inText andSecret:(NSString *)inSecret forRequest:(MPOAuthURLRequest *)inRequest usingMethod:(NSString *)inMethod {
